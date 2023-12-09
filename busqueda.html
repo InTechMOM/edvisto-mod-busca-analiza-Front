@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda EdVisto 3.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style1.css">
+  
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./assets/img/Ed_logo_rectangle 1 (Traced).svg" alt="Logo EdVisto" title="Logo EdVisto"
+                id="logo-edvisto">
+            <section class="profile">
+                <h2 id="modulo">¡Hola, Juan!</h2>
+                <img src="./assets/img/profile.svg" alt="Icono del perfil" aria-label="Icono del perfil"
+                    class="icono-perfil">
+                <img src="./assets/img/arrow-profile.svg" alt="Icono desplegable perfil"
+                    aria-label="Desplegar opciones del perfil" width="24px" height="24px">
+
+            </section>
+        </nav>
+        <div class="project">
+            <p>Proyecto: Los planetas</p>
+            <a href="/index.html">
+                <button type="button" class="back-btn"><img src="./assets/img/Back.svg" alt="flecha retroceso">Volver</button>
+            </a>
+        </div>
+        <section id="botonesmodulo">
+            <div class="botonesmodulo" id="botonesmodulo">
+                <div class="buttonssa">
+                <button class="button" id="search" aria-label="Botón de Búsqueda" >
+                    <a  class="a2" href="/busqueda.html">Buscar</a>  
+                </button>
+                </div>
+                <div class="buttonssa" id="buttonlibrary">
+                <button class="button" aria-label="Botón de Biblioteca" >
+                    <a class="a2" href="/biblioteca.html">Biblioteca</a>
+                </button>
+                </div>
+                <div class="buttonssa">
+                <button class="button" id="analysis" aria-label="Botón de Análisis" >
+                    <a  class="a2" href="/camino.html">Camino al aprendizaje</a> 
+                </button>
+                </div>
+                </div>
+        </section> 
+   </header>
+    <main>
+        <section class="search_section" >
+            <div class="buscador" id="search_sec" >
+                <h4 class="search_title" id="search_title">¡Hola!¿Qué buscaremos hoy?</h4>
+                <div class="search_area">
+                    <input class="busqueda" type="search" name="search" aria-label="Search" x-webkit-speech id="tema">
+                    <img src="./assets/img/icons/Voice.svg" alt="icono de microfono" class="mic_btn" id="default-micro">
+                    <img src="./assets/img/icons/microphone_black.svg" alt="icono microfono negro" class="mic_btn"
+                        id="alter-micro">
+                    <button type="button" class="search_btn" id="buttonAdd">
+                        <img src="./assets/img/icons/lupa.svg" alt="lupa">
+                    </button>
+                </div>
+            </div>
+            <img src="./assets/img/avatar_busqueda.svg" alt="perrito profesor" class="avatar" id="search_avtr">
+
+        </section>
+        <section id="search_result_section">
+            <div id="capture-area">
+            </div>
+            <div id="suggestion_area">
+              
+            </div>
+            <div id="result_section">
+                <div id="tab_btn"></div>
+                <div class="tab_api1 activo" id="videos" data-content></div>
+                <div class="tab_api2" id="articles" data-content></div>
+                <div id="save_container"></div>
+            </div>
+
+        </section>
+    </main>
+    <script type="module" src="./js/busqueda.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/sweetAlert.js"></script>
+
+</body>
+
+</html>
