@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <title>Crear Carpeta</title>
-    <link rel="stylesheet" href="./styles/styles.css"> 
+    <link rel="stylesheet" href="./css/styles.css"> 
 </head>
 <body >
     <header>
         <section id="botonesmodulo">
             <div class="botonesmodulo" id="botonesmodulo">
                 <div class="buttonssa">
-                <button class="button"  aria-label="Botón de Búsqueda" >
+                <button class="button" id="search" aria-label="Botón de Búsqueda" >
                     <a class="a2" href="/busqueda.html">Buscar</a>  
                 </button>
                 </div>
@@ -36,23 +36,21 @@
             <div id="TextForm">
                 <div id="FirstPart">
                     <div class="TextPart">
-                        <p><img  class="Icon" id="IconNameProyect" src="./assets/img/nombre-proyecto.svg" alt="Icono nombre del proyecto" width="20px" height="20px">Nombre del Proyecto</p>
+                        <p><img  class="Icon" id="IconNameProyect" src="./images/nombre-proyecto.svg" alt="Icono nombre del proyecto" width="20px" height="20px">Nombre del Proyecto</p>
                         <input id="NombreProyecto" class="InputNewFolder1" type="text" required placeholder="Example text here" readonly>
                         <div id="PCommunity" >
-                            <p><img id="Community" src="./assets/img/community.svg" alt="Icono comunidad" width="22px" height="13.62px">Comunidad</p>
+                            <p><img id="Community" src="./images/community.svg" alt="Icono comunidad" width="22px" height="13.62px">Comunidad</p>
                         <select class="InputNewFolder" name="Seleccionar comunidad" id="SeleccionarComunidad" disabled>
                             <option  value="selecciona" >Seleccionar comunidad</option>
                         </select>
                         </div>
-                        <p ><img class="Icon" id="IconObject" src="./assets/img/object.svg" alt="Icono del objetivo" width="18px" height="18px">Objetivo</p>
+                        <p ><img class="Icon" id="IconObject" src="./images/object.svg" alt="Icono del objetivo" width="18px" height="18px">Objetivo</p>
                         <input class="InputNewFolder1" id="ObjectPart" type="text" required placeholder="Example text here" readonly>
-                    </div>         
-                    <div class="UploadImage1" >
-                        <label for="UploadImageInput" >
-                            <img id="Upload-Image" src="./assets/img/upload-image.svg" alt="Subir imagen" width="145.29px" height="145.29px">
-                        </label>
-                        <input id="UploadImageInput" type="file" accept="image/png, image/jpeg" style="display: none;" disabled>
-                    </div>
+                    </div> 
+                    <div class="UploadImage1" id="UploadImage1">
+                        <input type="file" id="UploadImageInput" accept="image/" style="display: none;" disabled>
+                        <button id="custom-button"><img src="./images/upload-image.svg" alt="Vista previa" id="Upload-Image1"></button>
+                    </div>        
                 </div>
                             
             </div>
@@ -69,13 +67,13 @@
             <div id="tab_btn">
                 <div id="api1_btn">
                     <button class="tabButton active" id="search_videos" aria-label="Resultados de videos" data-target="#videos">
-                    <img class="default-img" src="./assets/img/videos_tab_white.svg" alt="icono video">
-                    <img class="active-image" src="./assets/img/ph_video.svg" alt="icono video">
+                    <img class="default-img" src="./images/videos_tab_white.svg" alt="icono video">
+                    <img class="active-image" src="./images/ph_video.svg" alt="icono video">
                     </button></div>
-                    <img src="./assets/img/separadorTabs.svg" alt="linea divisora" class="line">
+                    <img src="./images/separadorTabs.svg" alt="linea divisora" class="line">
                     <div id="api2_btn"><button class="tabButton" id="search_articles" aria-label="Resultado de articulos" data-target="#articles">
-                    <img class="default-img" src="./assets/img/art_tab_white.svg" alt="icono articulo">
-                    <img class="active-image" src="./assets/img/tab_articulos.svg" alt="icono articulo"></button></div>
+                    <img class="default-img" src="./images/art_tab_white.svg" alt="icono articulo">
+                    <img class="active-image" src="./images/tab_articulos.svg" alt="icono articulo"></button></div>
             </div>
             <div class="tab_api1 activo" id="videos" data-content></div>
             <div class="tab_api2" id="articles" data-content></div>
@@ -83,13 +81,13 @@
         </div>
 
         <div id="BodySaveFolder">
-            <h3  id="Save-videos">¡Ouch! Aún no tienes Videos Guardados</h3>
+            <h3  id="Save-videos" data-original-message="Mensaje original aquí">¡Ouch! Aun no tienes Videos Guardados</h3>
             <button class="button-investigate">
                 <a class="a1" href="/busqueda.html">¡Ir a Investigar!</a>
             </button>
         </div>
    </section>
-        
-        <script src="./js/nuevacarpeta.js"></script>
+   <script src="./js/service.js"></script>
+    <script src="./js/nuevacarpeta.js"></script>
 </body>
 </html>
